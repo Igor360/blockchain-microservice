@@ -1,15 +1,11 @@
 const router = require('express').Router();
 const ContractsController = require('../../http/controllers/contracts.controller');
 
-router.get('/:address/info', ContractsController('info') /* #swagger.tags = ['contract'] */);
-router.get('/:address/name', ContractsController('contractName') /* #swagger.tags = ['contract'] */);
-router.get('/:address/symbol', ContractsController('contractSymbol') /* #swagger.tags = ['contract'] */);
-router.get('/:address/decimals', ContractsController('contractDecimals') /* #swagger.tags = ['contract'] */);
-router.get('/:address/totalSupply', ContractsController('totalSupplyContract') /* #swagger.tags = ['contract'] */);
-router.post('/:contract/transferFrom', ContractsController('transferFrom') /* #swagger.tags = ['contract'] */);
-router.post('/:contract/transfer', ContractsController('transfer') /* #swagger.tags = ['contract'] */);
-router.post('/:contract/approve', ContractsController('approve') /* #swagger.tags = ['contract'] */);
-router.get('/:contract/allowance/:owner/:spender', ContractsController('allowance') /* #swagger.tags = ['contract'] */);
-router.get('/:contract/balanceOf/:address', ContractsController('balanceOf') /* #swagger.tags = ['contract'] */);
+router.get('/get/material/:tokenId', ContractsController('getMaterial') /* #swagger.tags = ['contract'] */);
+router.get('/get/transaction/:tokenId', ContractsController('getTransaction') /* #swagger.tags = ['contract'] */);
+router.get('/get/product/:tokenId', ContractsController('getProduct') /* #swagger.tags = ['contract'] */);
+router.post('/create/transaction', ContractsController('createTransaction') /* #swagger.tags = ['contract'] */);
+router.post('/create/product', ContractsController('createProduct') /* #swagger.tags = ['contract'] */);
+router.post('/create/material', ContractsController('createMaterial') /* #swagger.tags = ['contract'] */);
 
 module.exports = router;

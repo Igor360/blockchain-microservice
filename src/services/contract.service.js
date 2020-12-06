@@ -54,7 +54,7 @@ class ContractService {
     // Methods
 
 
-    async #generateContractRawTx(data) {
+    async generateContractRawTx(data) {
         let nonce = await this.checkNonce(this.nonce);
         let rawTxObject = await this.web3.prepareRawTx(nonce, this.ownerAddress, this.address, '0x0', data);
         let singedTx = await this.walletService.singTx(rawTxObject);
@@ -118,14 +118,14 @@ class ContractService {
      * Validate address
      * @param address
      */
-    #checkIfEthAddress(address) {
+    checkIfEthAddress(address) {
         if (!this.web3.isEthereumAddress(address)) {
             throw new InvalidAddressException("Invalid address format");
         }
     }
 
 
-    async #generateRawTxAndBroadcast(data) {
+    async generateRawTxAndBroadcast(data) {
         let {rawTxObject, singedTx} = await this.#generateContractRawTx(data);
         let res = await this.web3.broadcast(singedTx);
         if (this.web3.isTxHash(res.result)) {

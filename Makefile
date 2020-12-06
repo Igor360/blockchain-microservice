@@ -88,14 +88,14 @@ status: # Get status of containers
 	docker-compose -p $(PROJECT_NAME) $(DOCKER_COMPOSE_FILE) ps
 .PHONY: status
 
-#buildServer: # Build php cli cron container and push to docker hub local
-#	@$(MAKE)  --no-print-directory info
-#	@echo ${GREEN}"\nBuilding image...\n" ${END_COLOR}
-#	@docker rmi -f manager_blockchain_app || true
-#	@docker build . -f docker/app/Dockerfile --tag manager_blockchain_app --no-cache
-#	@docker tag manager_blockchain_app
-#	@docker push
-#	@docker rmi -f manager_blockchain_app || true
-#	@echo ${GREEN}"\nFINISHED\n" ${END_COLOR}
-#	@$(MAKE)  --no-print-directory end
-#.PHONY: buildServer
+buildServer: # Build php cli cron container and push to docker hub local
+	@$(MAKE)  --no-print-directory info
+	@echo ${GREEN}"\nBuilding image...\n" ${END_COLOR}
+	@docker rmi -f manager_blockchain_app || true
+	@docker build . -f docker/app/Dockerfile --tag manager_blockchain_app --no-cache
+	@docker tag manager_blockchain_app igor368/products_blockchain_app:server
+	@docker push igor368/products_blockchain_app:server
+	@docker rmi -f manager_blockchain_app || true
+	@echo ${GREEN}"\nFINISHED\n" ${END_COLOR}
+	@$(MAKE)  --no-print-directory end
+.PHONY: buildServer
