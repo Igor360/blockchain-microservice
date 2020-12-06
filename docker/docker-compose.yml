@@ -1,0 +1,29 @@
+version: '3.7'
+
+services:
+
+  server:
+    container_name: ${PROJECT_NAME:-project}_server
+    restart: unless-stopped
+    build:
+      context: ..
+      dockerfile: ./docker/app/Dockerfile
+    ports:
+      - ${DOCKER_SERVER_PORT:-8000}:${APP_PORT:-3000}
+    volumes:
+      - ./../:/code
+      - ./../node_modules:/code/node_modules
+    command: /code/node_modules/.bin/babel-node src/index.js
+    networks:
+      - base
+
+volumes:
+  dbdata:
+    name: ${PROJECT_NAME:-project}_db_data
+  node_modules:
+    name: ${PROJECT_NAME:-project}_node_modules
+
+networks:
+  base:
+    name: ${PROJECT_NAME:-project}_base
+    driver: bridge
