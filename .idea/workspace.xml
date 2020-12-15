@@ -2,28 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3621ae74-298c-48b7-9d3d-f31b76f3db37" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/http/controllers/wallet.controller.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/http/request/chechLimitParameter.request.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/http/request/chechMoney.request.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/http/request/checkAddressAndAmountParam.request.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/http/request/checkAmountParam.request.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/http/request/checkEthereumAddress.request.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/http/request/checkToAndAmountParam.request.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/api/wallet.api.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/contractManager.service.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/config/contract.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/contract.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/wallet.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/wallet.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/http/controllers/blockchain.controller.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/http/controllers/contracts.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/http/controllers/contracts.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/http/controllers/transactions.controller.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/providers/services.provider.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/providers/services.provider.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/api/blockchain.api.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/api/contract.api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/api/contract.api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/api/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/api/transactions.api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/api/transactions.api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/contract.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/contract.service.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +57,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1607276829009</updated>
-      <workItem from="1607276830102" duration="7072000" />
+      <workItem from="1607276830102" duration="7915000" />
+      <workItem from="1607369556281" duration="1698000" />
     </task>
     <servers />
   </component>
